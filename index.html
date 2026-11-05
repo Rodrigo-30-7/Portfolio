@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio profesional de Data Science: proyectos, habilidades y contacto." />
+  <title>Rodrigo | Data Scientist</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --panel: #151d33;
+      --text: #eef4ff;
+      --muted: #a9b7cf;
+      --accent: #69e2dc
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    a:hover {
+      color: var(--accent)
+    }
+
+    .wrap {
+      max-width: 1050px;
+      margin: auto;
+      padding: 0 24px
+    }
+
+    header {
+      border-bottom: 1px solid #28344b;
+      position: sticky;
+      top: 0;
+      background: #0b1020ee;
+      backdrop-filter: blur(10px);
+      z-index: 5
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 70px
+    }
+
+    nav .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: .9rem
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--accent)
+    }
+
+    .hero {
+      padding: 110px 0 100px
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .85rem
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5.3rem);
+      line-height: 1.1;
+      letter-spacing: -.045em;
+      margin: 16px 0
+    }
+
+    h1 span {
+      color: var(--accent)
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      max-width: 670px;
+      color: var(--muted)
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: #071422;
+      border-radius: 10px;
+      font-weight: 750
+    }
+
+    .btn:hover {
+      background: #a2fff5;
+      color: #071422
+    }
+
+    section {
+      padding: 55px 0
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 18px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #293750;
+      padding: 24px;
+      border-radius: 16px
+    }
+
+    .card h3 {
+      margin-top: 0
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .tag {
+      padding: 7px 12px;
+      background: #20324a;
+      color: #b9f7f1;
+      border-radius: 99px;
+      font-size: .9rem
+    }
+
+    footer {
+      border-top: 1px solid #28344b;
+      padding: 30px 0;
+      color: var(--muted)
+    }
+
+    @media(max-width:720px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding: 75px 0
+      }
+
+      nav {
+        align-items: flex-start;
+        padding: 16px 0;
+        flex-direction: column
+      }
+
+      .links {
+        gap: 12px !important
+      }
+    }
+    
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.linkedin {
+  background: #0a66c2;
+  color: white;
+}
+
+.github {
+  background: #30363d;
+  color: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.2);
+}
+
+
+/* Espacio antes de cada sección */
+#habilidades,
+#proyectos,
+#contacto {
+  padding-top: 60px;
+}
+
+/* Separación entre títulos y contenido */
+#habilidades h2,
+#proyectos h2,
+#contacto h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="wrap"><a class="logo" href="#inicio">RODRIGO / DS</a>
+      <div class="links"><a href="#sobre-mi">Sobre mí</a><a href="#habilidades">Habilidades</a><a
+          href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div class="eyebrow">Data Science · Machine Learning · IA</div>
+      <h1>Hola, soy Rodrigo.<br><span>Transformo datos en decisiones.</span></h1>
+      <p class="lead">Trabajo en proyectos de analítica avanzada y modelos predictivos. 
+        Este portafolio es también un laboratorio para experimentar con desarrollo web y herramientas de IA.</p><a class="btn"
+        href="#proyectos">Explorar proyectos ↓</a>
+    </section>
+    <section class="wrap" id="sobre-mi">
+      <h2>Sobre mí</h2>
+
+<p class="muted">
+  Soy <strong>Ingeniero en Estadística con 10 años de experiencia profesional</strong>,
+  especializado en <strong>Data Science durante los últimos 6 años</strong>.
+  Combino conocimientos avanzados en
+  <strong>Machine Learning, Inteligencia Artificial, analítica predictiva
+  e ingeniería de datos</strong> con una visión estratégica de negocio.
+  Cuento con experiencia liderando proyectos <strong>end-to-end</strong>,
+  desarrollando soluciones escalables en
+  <strong>Python, R, SQL y entornos cloud</strong>,
+  transformando datos en decisiones estratégicas y resultados
+  de alto impacto en diversas industrias.
+</p>
+
+    </section>
+    <section class="wrap" id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Machine
+          Learning</span><span class="tag">Estadística</span><span class="tag">Power BI</span><span class="tag">Series
+          de tiempo</span><span class="tag">IA aplicada</span><span class="tag">AWS Sagemaker</span>
+          <span class="tag">Azure DataBricks</span><span class="tag">Kedro</span><span class="tag">Git</span>
+          <span class="tag">Excel</span><span class="tag">Big Data</span><span class="tag">Liderazgo</span><span class="tag">Negocio</span></div>
+    </section>
+    <section class="wrap" id="proyectos">
+      <h2>Proyectos</h2>
+      <p class="muted">He liderado y llevado a cabo diversos proyectos enfocados en analítica avanzada.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Predicción de ventas</h3>
+          <p >Modelos de series temporales para anticipar resultados comerciales.</p>
+          <a
+            href="https://drive.google.com/file/d/1ZtehBDFYm1Lr94Fl_gBI1_8wb00ZzWC8/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pill"
+          >
+            Forecasting ↗
+          </a>
+        </article>
+        <article class="card">
+          <h3>Modelos de clasificación</h3>
+          <p>Estimación de probabilidades para apoyar decisiones basadas en datos.</p>
+          <a
+            href="https://drive.google.com/file/d/1TOXbq-FmQFsGIjm7sZqsMJjNz9kMny7E/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pill"
+          >
+            Machine Learning ↗
+          </a>
+        </article>
+        <article class="card">
+          <h3>Analítica de marketing</h3>
+          <p>Análisis de impacto incremental en campañas de marketing.</p>
+          <a
+            href="https://drive.google.com/file/d/1Ktqyw-S23xEnm-bFu8h8jgliqcr9jVKy/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pill"
+          >
+            Marketing Analytics ↗
+          </a>
+        </article>
+      </div>
+    </section>
+    
+<section class="wrap" id="contacto">
+
+  <h2>Contacto</h2>
+
+  <p class="muted">
+    ¿Quieres asesoría sobre datos, tecnología o inteligencia artificial?. Contáctame aquí:
+  </p>
+
+  <div class="social-links">
+
+    <a
+      href="https://www.linkedin.com/in/rodrigoarriagadabaeza/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-btn linkedin"
+    >
+      LinkedIn ↗
+    </a>
+
+    <a
+      href="https://github.com/Rodrigo-30-7"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-btn github"
+    >
+      GitHub ↗
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Rodrigo · Construido con HTML, CSS e IA.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
